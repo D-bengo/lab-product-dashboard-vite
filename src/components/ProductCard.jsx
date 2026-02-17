@@ -1,17 +1,23 @@
-import React from 'react';
-import styles from '../styles/ProductCard.module.css';
+import React from "react";
+import styles from "../styles/ProductCard.module.css";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className>
-      {/* TODO: Apply conditional class to <div> above for out-of-stock items */}
-      
-      {/* TODO: Display product name */}
+    <div
+      className={
+        product.inStock ? styles.card : styles.outOfStock
+      }
+      data-testid="product-card"
+    >
+      <h2>{product.name}</h2>
 
-      {/* TODO: Display product price */}
+      <p>Price: {product.price}</p>
 
-      {/* TODO: Show if the product is in stock or out of stock */}
-      
+      {product.inStock ? (
+        <p>In Stock</p>
+      ) : (
+        <p>Out of Stock</p>
+      )}
     </div>
   );
 };
