@@ -1,8 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-const ProductList = ({ products }) => {
-  // Check if list is empty or undefined
+const ProductList = ({ products, onRemove }) => {
   if (!products || products.length === 0) {
     return <p>No products available.</p>;
   }
@@ -13,6 +12,7 @@ const ProductList = ({ products }) => {
         <ProductCard
           key={product.id}
           product={product}
+          onRemove={onRemove} // pass the remove function
         />
       ))}
     </>
