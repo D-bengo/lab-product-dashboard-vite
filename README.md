@@ -46,7 +46,7 @@ product-dashboard/
 
 ## Setup Instructions
 1. Clone the repository
- - git clone <your-repository-url>
+ - git clone (your-repository-url)
  - cd product-dashboard
 
 2. Install dependencies
